@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-k8-kube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poc-k8-kube
+  template:
+    metadata:
+      labels:
+        app: poc-k8-kube
+    spec:
+      containers:
+        - name: app
+          image: veenu143/poc-k8-java:1.0.0
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
