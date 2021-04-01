@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: veenu143/poc-k8-java:1.0.0
+          image: 414795437038.dkr.ecr.us-east-1.amazonaws.com/demo:2.0.0
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
